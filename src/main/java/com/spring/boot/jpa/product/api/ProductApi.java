@@ -1,5 +1,6 @@
 package com.spring.boot.jpa.product.api;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -59,5 +60,44 @@ public class ProductApi {
 	public void removeProduct(@PathVariable int id) {
 		getById(id);
 		repository.deleteById(id);
+	}
+	
+	/**
+	 * Search Operations
+	 */
+	
+	@GetMapping("/findByName/{name}")
+	public List<Product> findByName(@PathVariable String name) {
+		return repository.findByName(name);
+	}
+	
+	@GetMapping("/findByNameAndDesc/{name}/{desc}")
+	public List<Product> findByNameAndDesc(@PathVariable String name, @PathVariable String desc) {
+		return repository.findByNameAndDesc(name, desc);
+	}
+	
+	@GetMapping("/findByPrice/{price}")
+	List<Product> findByPriceGreaterThanEqual(@PathVariable double price) {
+		return repository.findByPriceGreaterThanEqual(price);
+	}
+	
+	@GetMapping("/findByNameContains/{name}")
+	List<Product> findByNameContains(@PathVariable String name) {
+		return repository.findByNameContains(name);
+	}
+	
+	@GetMapping("/findByPriceBetween/{from}/{to}")
+	List<Product> findByPriceBetween(@PathVariable double from, @PathVariable double to) {
+		return repository.findByPriceBetween(from, to);
+	}
+	
+	@GetMapping("/findByNameLike/{name}")
+	List<Product> findByNameLike(@PathVariable String name) {
+		return repository.findByNameLike("%" + name + "%");
+	}
+	
+	@GetMapping("/findByIdIn/{ids}")
+	List<Product> findByIdIn(@PathVariable List<Integer> ids) {
+		return repository.findByIdIn(ids);
 	}
 }
