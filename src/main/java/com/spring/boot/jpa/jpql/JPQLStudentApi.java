@@ -1,4 +1,4 @@
-package com.spring.boot.jpa.product.api;
+package com.spring.boot.jpa.jpql;
 
 import java.util.List;
 
@@ -12,9 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.spring.boot.jpa.product.data.JPQLStudent;
-import com.spring.boot.jpa.product.repo.JPQLStudentRepository;
 
 @RestController
 @RequestMapping("/jpql/student")

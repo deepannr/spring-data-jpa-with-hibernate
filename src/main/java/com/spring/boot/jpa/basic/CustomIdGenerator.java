@@ -1,4 +1,4 @@
-package com.spring.boot.jpa.product.data;
+package com.spring.boot.jpa.basic;
 
 import java.io.Serializable;
 import java.util.Random;

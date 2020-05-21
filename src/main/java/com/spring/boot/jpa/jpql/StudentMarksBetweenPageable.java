@@ -1,6 +1,6 @@
-package com.spring.boot.jpa.product.api;
+package com.spring.boot.jpa.jpql;
 
-class StudentMarksBetweenPageable {
+public class StudentMarksBetweenPageable {
 	private int fromMarks;
 	
 	private int toMarks;

@@ -1,4 +1,4 @@
-package com.spring.boot.jpa.product.data;
+package com.spring.boot.jpa.pageAndSort;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiModelProperty;
 @Entity
 @Table (name = "Product")
 @ApiModel ("All Details about Product")
-public class Product {
+public class ProductPageAndSort {
 	@Id
 	
 //	@TableGenerator(name = "product_gen", table = "id_gen", pkColumnName = "gen_name", valueColumnName = "gen_val", allocationSize = 10)
@@ -45,11 +45,11 @@ public class Product {
 	@ApiModelProperty(notes = "Price should be positive Value")
 	private double price;
 
-	public Product() {
+	public ProductPageAndSort() {
 		// do Nothing
 	}
 
-	public Product(String name, String desc, double price) {
+	public ProductPageAndSort(String name, String desc, double price) {
 		this.name = name;
 		this.desc = desc;
 		this.price = price;

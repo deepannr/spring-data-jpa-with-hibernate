@@ -1,4 +1,4 @@
-package com.spring.boot.jpa.product.data;
+package com.spring.boot.jpa.product.nativeQuery;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 @Entity
 @Table(name = "Student")
 @ApiModel("All Details about Student")
-public class JPQLStudent {
+public class NativeStudent {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "studId")

@@ -1,4 +1,4 @@
-package com.spring.boot.jpa.product.api;
+package com.spring.boot.jpa.product.nativeQuery;
 
 import java.util.List;
 
@@ -14,30 +14,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.spring.boot.jpa.product.data.JPQLStudent;
-import com.spring.boot.jpa.product.repo.JPQLStudentClassRepository;
-import com.spring.boot.jpa.product.repo.JPQLStudentRepository;
-import com.spring.boot.jpa.product.repo.NativeQueryStudentRepository;
-
 @RestController
 @RequestMapping("/native/student")
 public class NativeQueryStudentApi {
 
-	 @PersistenceContext
-	 private EntityManager entityManager;
-
-	@Autowired
-	private JPQLStudentRepository repository;
+	@PersistenceContext
+	private EntityManager entityManager;
 	
 	@Autowired
-	private JPQLStudentClassRepository classRepository;
+	private NativeQueryStudentClassRepository classRepository;
 	
 	@Autowired
 	private NativeQueryStudentRepository nativeRepository;
 	
 	
 	@GetMapping("/all")
-	public List<JPQLStudent> findAllStudentsNQ() {
+	public List<NativeStudent> findAllStudentsNQ() {
 		return nativeRepository.findAllStudentsNQ();
 	}
 	
@@ -47,20 +39,20 @@ public class NativeQueryStudentApi {
 	}
 	
 	@GetMapping("/marks/{marks}")
-	public List<JPQLStudent> findByMarksNQ(@PathVariable int marks) {
+	public List<NativeStudent> findByMarksNQ(@PathVariable int marks) {
 		return nativeRepository.findByMarksNQ(marks);
 	}
 	
 	@PostMapping("/insert")
-	public List<JPQLStudent> insertandSelectSutdents(@RequestBody JPQLStudent student) {
+	public List<NativeStudent> insertandSelectSutdents(@RequestBody NativeStudent student) {
 		student.setId(nativeRepository.findMaxEmpId() + 1);
 		classRepository.insertStudent(student);
-		return repository.findAllStudents();
+		return nativeRepository.findAllStudentsNQ();
 	}
 	
 	@DeleteMapping("/remove/{id}")
-	public List<JPQLStudent> removeStudent(@PathVariable int id) {
+	public List<NativeStudent> removeStudent(@PathVariable int id) {
 		classRepository.removeStudent(id);
-		return repository.findAllStudents();
+		return nativeRepository.findAllStudentsNQ();
 	}
 }
