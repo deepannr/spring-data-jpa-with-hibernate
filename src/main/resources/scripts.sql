@@ -6,3 +6,15 @@ insert into Product (id, name, description, price) values (5, 'XUV 500', 'Mahind
 insert into Product (id, name, description, price) values (6, 'Morazzo', 'Mahindra', 1000000);
 insert into Product (id, name, description, price) values (7, 'Kwid', 'Mahindra', 350000);
 insert into Product (id, name, description, price) values (8, 'Daweo', 'Matiz', 350000);
+
+insert into Student(stud_id, f_name, l_name, score) values (1, 'Dhoni', 'MS', 100);
+insert into Student(stud_id, f_name, l_name, score) values (2, 'Rohit', 'Sharma', 98);
+insert into Student(stud_id, f_name, l_name, score) values (3, 'Shikar', 'Dhawan', 78);
+insert into Student(stud_id, f_name, l_name, score) values (4, 'Virat', 'Kohli', 99);
+insert into Student(stud_id, f_name, l_name, score) values (5, 'KL', 'Rahul', 83);
+insert into Student(stud_id, f_name, l_name, score) values (6, 'Sherayas', 'Iyer', 83);
+insert into Student(stud_id, f_name, l_name, score) values (7, 'Ravindra', 'Jedaja', 88);
+insert into Student(stud_id, f_name, l_name, score) values (8, 'Jasprit', 'Buhmra', 95);
+insert into Student(stud_id, f_name, l_name, score) values (9, 'Bhuvanesh', 'Kumar', 79);
+insert into Student(stud_id, f_name, l_name, score) values (10, 'Hardik', 'Pandya', 84);
+insert into Student(stud_id, f_name, l_name, score) values (11, 'Kuldeep', 'Yadav', 85);

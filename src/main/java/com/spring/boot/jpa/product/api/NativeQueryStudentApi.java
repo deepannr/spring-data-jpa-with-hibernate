@@ -41,6 +41,11 @@ public class NativeQueryStudentApi {
 		return nativeRepository.findAllStudentsNQ();
 	}
 	
+	@GetMapping("/names/all")
+	public List<Object[]> findAllStudentNames() {
+		return nativeRepository.findAllStudentNames();
+	}
+	
 	@GetMapping("/marks/{marks}")
 	public List<JPQLStudent> findByMarksNQ(@PathVariable int marks) {
 		return nativeRepository.findByMarksNQ(marks);
