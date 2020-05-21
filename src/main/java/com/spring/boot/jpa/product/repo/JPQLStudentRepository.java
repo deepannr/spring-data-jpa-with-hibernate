@@ -16,7 +16,7 @@ public interface JPQLStudentRepository extends CrudRepository<JPQLStudent, Integ
 	@Query("from JPQLStudent")
 	List<JPQLStudent> findAllStudents();
 
-	@Query("from JPQLStudent u WHERE lower(u.firstName) LIKE lower(CONCAT('%', :keyword, '%')) OR lower(u.lastName) LIKE lower(CONCAT('%', :keyword, '%'))")
+	@Query("from JPQLStudent u WHERE u.firstName LIKE CONCAT('%', :keyword, '%') OR u.lastName LIKE CONCAT('%', :keyword, '%')")
 	List<JPQLStudent> findAllStudentsByFirstName(@Param("keyword") String fName);
 
 	@Query("Select st.firstName, st.lastName from JPQLStudent st")
