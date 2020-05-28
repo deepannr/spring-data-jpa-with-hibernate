@@ -69,7 +69,13 @@
 			<version>2.0.2</version>
 		</dependency>
 		<!-- End Swagger -->
-
+		
+		<!-- EHCache -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+		</dependency>
+		<!-- End EHCache -->
 	</dependencies>
 
 	<build>

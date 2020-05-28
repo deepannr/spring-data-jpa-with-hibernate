@@ -18,3 +18,10 @@ insert into Student(stud_id, f_name, l_name, score) values (8, 'Jasprit', 'Buhmr
 insert into Student(stud_id, f_name, l_name, score) values (9, 'Bhuvanesh', 'Kumar', 79);
 insert into Student(stud_id, f_name, l_name, score) values (10, 'Hardik', 'Pandya', 84);
 insert into Student(stud_id, f_name, l_name, score) values (11, 'Kuldeep', 'Yadav', 85);
+
+
+
+
+
+insert into TR_BANK_ACCOUNT (account_number, first_name, last_name, balance) values (1, 'Dee', 'NR', 2600);
+insert into TR_BANK_ACCOUNT (account_number, first_name, last_name, balance) values (2, 'Sni', 'C', 2000);
