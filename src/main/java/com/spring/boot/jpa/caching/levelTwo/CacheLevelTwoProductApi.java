@@ -1,4 +1,4 @@
-package com.spring.boot.jpa.association.caching.levelOne;
+package com.spring.boot.jpa.caching.levelTwo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping ("/cache/levelOne/product")
-public class CacheLevelOneProductApi {
+@RequestMapping ("/cache/levelTwo/product")
+public class CacheLevelTwoProductApi {
 	
 	@Autowired
-	private CacheLevelOneProductService service;
+	private CacheLevelTwoProductService service;
 	
 	@GetMapping("/find/{id}")
-	public CacheLevelOneProduct getById(@PathVariable int id) {
+	public CacheLevelTwoProduct getById(@PathVariable int id) {
 		return service.getProductById(id);
 	}
 }

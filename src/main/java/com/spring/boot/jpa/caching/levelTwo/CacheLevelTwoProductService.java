@@ -1,4 +1,4 @@
-package com.spring.boot.jpa.association.caching.levelTwo;
+package com.spring.boot.jpa.caching.levelTwo;
 
 import java.util.Optional;
 

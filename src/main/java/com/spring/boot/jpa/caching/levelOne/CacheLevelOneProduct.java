@@ -1,4 +1,4 @@
-package com.spring.boot.jpa.association.caching.levelOne;
+package com.spring.boot.jpa.caching.levelOne;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
