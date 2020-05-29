@@ -56,7 +56,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- Swagger -->
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -69,13 +69,29 @@
 			<version>2.0.2</version>
 		</dependency>
 		<!-- End Swagger -->
-		
+
 		<!-- EHCache -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-ehcache</artifactId>
 		</dependency>
 		<!-- End EHCache -->
+
+		<!-- Mongo DB Dependency -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+		</dependency>
+		<!-- End Mongo DB Dependency -->
+
+		<!-- Embedded Mongo DB -->
+<!-- 	<dependency>
+			<groupId>de.flapdoodle.embed</groupId>
+			<artifactId>de.flapdoodle.embed.mongo</artifactId>
+			<scope>test</scope>
+		</dependency> -->
+		<!-- End Embedded Mongo DB -->
+
 	</dependencies>
 
 	<build>
