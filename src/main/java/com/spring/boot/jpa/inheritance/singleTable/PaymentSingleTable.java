@@ -8,10 +8,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 
 import io.swagger.annotations.ApiModel;
 
 @Entity
+@Table(name = "single_table_payment")
 @ApiModel("All Details about Payments")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="pmode", discriminatorType = DiscriminatorType.STRING)

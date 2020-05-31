@@ -6,12 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 
 import io.swagger.annotations.ApiModel;
 
 @Entity
 @ApiModel("All Details about Payments")
 @Inheritance(strategy = InheritanceType.JOINED)
+@Table(name = "joined_payment")
 public abstract class PaymentJoined {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

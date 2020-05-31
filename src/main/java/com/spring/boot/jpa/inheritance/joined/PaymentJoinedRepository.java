@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 public interface PaymentJoinedRepository extends CrudRepository<PaymentJoined, Integer> {
-	@Query(value = "select COALESCE(max(id), 0) maxId from PAYMENT_JOINED", nativeQuery = true)
+	@Query(value = "select COALESCE(max(id), 0) maxId from JOINED_PAYMENT", nativeQuery = true)
 	int findMaxId();
 	
 	@Query("FROM CreditCardJoined")

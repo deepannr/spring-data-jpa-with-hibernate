@@ -1,8 +1,10 @@
 package com.spring.boot.jpa.inheritance.tablePerClass;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "table_per_class_credit_card")
 public class CreditCardTablePerClass extends PaymentTablePerClass {
 	private String cardNumber;
 
