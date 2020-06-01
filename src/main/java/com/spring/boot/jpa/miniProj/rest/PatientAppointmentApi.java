@@ -2,6 +2,8 @@ package com.spring.boot.jpa.miniProj.rest;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -77,11 +79,28 @@ class PatientAppointmentApi {
 		Appointment appointment = new Appointment();
 		Timestamp now = new Timestamp(new Date().getTime());
 		appointment.setAppointmentDate(now);
-		appointment.setPatient(patientRepo.findAllPatientsByName(input.getPatientName()));
-		appointment.setDoctor(doctorRepo.findAllDoctorByName(input.getDoctorName()));
+		Patient patient = patientRepo.findAllPatientsByName(input.getPatientName());
+		Doctor doctor = doctorRepo.findAllDoctorByName(input.getDoctorName());
+
+		Set<Doctor> doctors = patient.getDoctors();
+		if(null == doctors || doctors.isEmpty()) {
+			doctors = new HashSet<>();
+		}
+		doctors.add(doctor);
+		patient.setDoctors(doctors);
+		appointment.setPatient(patient);
+		
+		Set<Patient> patients = doctor.getPatients();
+		if(null == patients || patients.isEmpty()) {
+			patients = new HashSet<>();
+		}
+		patients.add(patient);
+		doctor.setPatients(patients);
+		
+		appointment.setDoctor(doctor);
 		appointment.setStarted(true);
 		appointment.setReason(input.getReason());
-
+		
 		appointmentRepo.save(appointment);
 		
 		return appointmentRepo.findAll();
