@@ -1,0 +1,1611 @@
+{
+	"info": {
+		"_postman_id": "adeb3cf9-a072-4bc3-9e24-614830ec5158",
+		"name": "SpringDataJpaWithHibernate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Innova VXi\",\n\t\"desc\" : \"Toyato\",\n\t\"price\" : 1300000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"create"
+							]
+						},
+						"description": "Product Create"
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"all"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "FindByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/findByName/Kwid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"findByName",
+								"Kwid"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "FindByPrice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/findByPrice/400000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"findByPrice",
+								"400000"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "FindByPriceBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/findByPriceBetween/500000/1200000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"findByPriceBetween",
+								"500000",
+								"1200000"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "FindByNameAndDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/findByNameAndDesc/Kwid/Mahindra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"findByNameAndDesc",
+								"Kwid",
+								"Mahindra"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "FindByNameContains",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/findByNameContains/ov",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"findByNameContains",
+								"ov"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "FindByNameLike",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/findByNameLike/In",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"findByNameLike",
+								"In"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "FindByIdIn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/findByIdIn/2,5,6,7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"findByIdIn",
+								"2,5,6,7"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/find/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"find",
+								"2"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/remove/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"remove",
+								"2"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Innova ZXi\",\n\t\"desc\" : \"Toyato\",\n\t\"price\" : 2000000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"update",
+								"2"
+							]
+						},
+						"description": "http://localhost:8080/product/all"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ProductPageAndSort",
+			"item": [
+				{
+					"name": "GetAllPaging",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pagingAndSort/product/paging/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagingAndSort",
+								"product",
+								"paging",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllSorting",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pagingAndSort/product/sorting/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagingAndSort",
+								"product",
+								"sorting",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllSortingDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pagingAndSort/product/sorting/desc/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagingAndSort",
+								"product",
+								"sorting",
+								"desc",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllSortingMultiple",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pagingAndSort/product/sorting/multiple/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagingAndSort",
+								"product",
+								"sorting",
+								"multiple",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllPageAndSort1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pagingAndSort/product/pageAndSort/type1/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagingAndSort",
+								"product",
+								"pageAndSort",
+								"type1",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllPageAndSort2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pagingAndSort/product/pageAndSort/type2/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagingAndSort",
+								"product",
+								"pageAndSort",
+								"type2",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "JPQL",
+			"item": [
+				{
+					"name": "GetAllStudents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jpql/student/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jpql",
+								"student",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllStudentsByFName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jpql/student/all/e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jpql",
+								"student",
+								"all",
+								"e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllStudentNames",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jpql/student/names/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jpql",
+								"student",
+								"names",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByStudentMarks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jpql/student/find/marks/85",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jpql",
+								"student",
+								"find",
+								"marks",
+								"85"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BetweenStudentMarks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jpql/student/between/marks/70/80",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jpql",
+								"student",
+								"between",
+								"marks",
+								"70",
+								"80"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PageableBetweenStudentMarks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fromMarks\" : 75,\n\t\"toMarks\" : 90,\n\t\"page\" : 1,\n\t\"size\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jpql/student/between/marks/pageable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jpql",
+								"student",
+								"between",
+								"marks",
+								"pageable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DirectionStudentMarks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fromMarks\" : 75,\n\t\"toMarks\" : 90,\n\t\"page\" : 1,\n\t\"size\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jpql/student/marks/direction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jpql",
+								"student",
+								"marks",
+								"direction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SortStudentMarks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fromMarks\" : 75,\n\t\"toMarks\" : 90,\n\t\"page\" : 1,\n\t\"size\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jpql/student/marks/sort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jpql",
+								"student",
+								"marks",
+								"sort"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "NativeQuery",
+			"item": [
+				{
+					"name": "GetAllStudents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/native/student/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"native",
+								"student",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllStudentsNames",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/native/student/names/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"native",
+								"student",
+								"names",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllStudentsByMarks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/native/student/marks/82",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"native",
+								"student",
+								"marks",
+								"82"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\" : \"Ishant\",\n\t\"lastName\" : \"Sharma\",\n\t\"marks\": 75\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/native/student/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"native",
+								"student",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveStudent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/native/student/remove/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"native",
+								"student",
+								"remove",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Inheritance",
+			"item": [
+				{
+					"name": "SingleTableCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"amount\" : 2500,\n\t\"number\" : \"1234567890123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inheritance/singleTable/card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inheritance",
+								"singleTable",
+								"card"
+							]
+						},
+						"description": "http://localhost:8080/inheritance/singleTable/card"
+					},
+					"response": []
+				},
+				{
+					"name": "SingleTableCheque",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"amount\" : 1000,\n\t\"number\" : \"1234567890\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inheritance/singleTable/cheque",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inheritance",
+								"singleTable",
+								"cheque"
+							]
+						},
+						"description": "http://localhost:8080/inheritance/singleTable/card"
+					},
+					"response": []
+				},
+				{
+					"name": "TablePerClassCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"amount\" : 2500,\n\t\"number\" : \"1234567890123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inheritance/tablePerClass/card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inheritance",
+								"tablePerClass",
+								"card"
+							]
+						},
+						"description": "http://localhost:8080/inheritance/singleTable/card"
+					},
+					"response": []
+				},
+				{
+					"name": "TablePerClassCheque",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"amount\" : 2600,\n\t\"number\" : \"1234567890\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inheritance/tablePerClass/cheque",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inheritance",
+								"tablePerClass",
+								"cheque"
+							]
+						},
+						"description": "http://localhost:8080/inheritance/singleTable/card"
+					},
+					"response": []
+				},
+				{
+					"name": "JoinedCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"amount\" : 2500,\n\t\"number\" : \"1234567890123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inheritance/joined/card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inheritance",
+								"joined",
+								"card"
+							]
+						},
+						"description": "http://localhost:8080/inheritance/singleTable/card"
+					},
+					"response": []
+				},
+				{
+					"name": "JoinedCheque",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"amount\" : 20500,\n\t\"number\" : \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inheritance/joined/cheque",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inheritance",
+								"joined",
+								"cheque"
+							]
+						},
+						"description": "http://localhost:8080/inheritance/singleTable/card"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ComponentMapping",
+			"item": [
+				{
+					"name": "ComponentMapping",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Sub\",\n\t\"streetAddress\" : \"Rasu\",\n\t\"city\" : \"Kg\",\n\t\"zipCode\" : 635001,\n\t\"state\" : \"Tamil Nadu\",\n\t\"country\" : \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/componentMapping/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"componentMapping",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Association",
+			"item": [
+				{
+					"name": "OneToMany",
+					"item": [
+						{
+							"name": "Insert",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Sub\",\n\t\"numbers\" : [\n\t\t{\n\t\t\t\"number\" : \"9738623625\",\n\t\t\t\"type\" : \"cell\"\n\t\t}, {\n\t\t\t\"number\" : \"8807629602\",\n\t\t\t\"type\" : \"home\"\n\t\t}\n\t]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/association/oneToMany/insert",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"association",
+										"oneToMany",
+										"insert"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/association/oneToMany/remove/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"association",
+										"oneToMany",
+										"remove",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "ManyToMany",
+					"item": [
+						{
+							"name": "Insert",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"programmerName\" : \"Deepan\",\n\t\"programmerSalary\" : 200000,\n\t\"projectNames\" : [\"ConfigMgmt\", \"TDC\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/association/manyToMany/insert",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"association",
+										"manyToMany",
+										"insert"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "OneToOne",
+					"item": [
+						{
+							"name": "Insert",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"firstName\" : \"Subashini\",\n\t\"lastName\" : \"C\",\n\t\"age\" : 39,\n\t\"licenseType\" : \"LMV\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/association/oneToOne/insert",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"association",
+										"oneToOne",
+										"insert"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RemoveLicense",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/association/oneToOne/removeLicense/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"association",
+										"oneToOne",
+										"removeLicense",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RemovePerson",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/association/oneToOne/removePerson/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"association",
+										"oneToOne",
+										"removePerson",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Caching",
+			"item": [
+				{
+					"name": "LevelOne",
+					"item": [
+						{
+							"name": "LevelOne",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cache/levelOne/product/find/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cache",
+										"levelOne",
+										"product",
+										"find",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "LevelTwo",
+					"item": [
+						{
+							"name": "LevelTwo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cache/levelTwo/product/find/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cache",
+										"levelTwo",
+										"product",
+										"find",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TransactionManagement",
+			"item": [
+				{
+					"name": "Transfer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/transactionManagement/transfer/600",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transactionManagement",
+								"transfer",
+								"600"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "FileSaveAndRetrieve",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "myImage3.jpg",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Yezdi/StudyProjects/SpringBootWithMicroServices/Code/spring-data-jpa-with-hibernate/src/main/resources/fileSaveAndRetrieve.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/fileSaveAndRetrieve/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fileSaveAndRetrieve",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fileSaveAndRetrieve/find/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fileSaveAndRetrieve",
+								"find",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Mongo",
+			"item": [
+				{
+					"name": "Embedded",
+					"item": [
+						{
+							"name": "SaveProduct",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Samsung\",\n\t\"price\" : 10000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/mongo/emded/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"mongo",
+										"emded",
+										"save"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CompoisteKey",
+			"item": [
+				{
+					"name": "idClass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 123,\n\t\"email\" : \"deep@ccc.com\",\n\t\"name\" : \"deepan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/compositeKey/idClass/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compositeKey",
+								"idClass",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Embed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 123,\n\t\"email\" : \"deep@ccc.com\",\n\t\"name\" : \"deepan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/compositeKey/embed/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compositeKey",
+								"embed",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "MiniProject",
+			"item": [
+				{
+					"name": "AddPatient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\" : \"Deepan\",\n\t\"lastName\" : \"NR\",\n\t\"phone\" : \"123456789\",\n\t\"providerName\" : \"Star Health\",\n\t\"copay\" : \"Insurance\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/patientAppointment/addPatient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patientAppointment",
+								"addPatient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddDoctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\" : \"Sub\",\n\t\"lastName\" : \"C\",\n\t\"speciality\" : \"General\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/patientAppointment/addDoctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patientAppointment",
+								"addDoctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetAppointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patientName\" : \"Dee\",\n\t\"doctorName\" : \"ub\",\n\t\"reason\" : \"Emergency\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/patientAppointment/setAppointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patientAppointment",
+								"setAppointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllDoctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patientAppointment/findAllDoctors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patientAppointment",
+								"findAllDoctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllPatients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patientAppointment/findAllPatients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patientAppointment",
+								"findAllPatients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllAppointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patientAppointment/findAllAppointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patientAppointment",
+								"findAllAppointments"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
